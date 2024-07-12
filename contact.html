@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - PJTech</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">PJTech</div>
+    <nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="nav-toggle">
+            <span class="hamburger"></span>
+        </button>
+    </nav>
+</header>
+
+<div class="contact">
+    <div class="contact-header">
+        <h2>Contact Us</h2>
+        <p>Get in touch with us for more information about our services.</p>
+    </div>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <ul>
+                <ul>
+    <li>
+        <a href="tel:+2347083023292">
+            <i class="fas fa-phone"></i> +234 708 302 3292
+        </a>
+    </li>
+    <li>
+        <a href="mailto:olioxxayo@gmail.com">
+            <i class="fas fa-envelope"></i> olioxxayo@gmail.com
+        </a>
+    </li>
+</ul>
+
+            </ul>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/pjtechpos" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="button" onclick="openModal()">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Image Section -->
+<div class="image-section">
+    <img src="images/Customer software development .png" alt="Descriptive Alt Text">
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>About PJTech</h3>
+            <p>PJTech is dedicated to revolutionizing sales and inventory management with our advanced POS system.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Services</h3>
+            <ul>
+                <li><a href="possystem.html">POS System</a></li>
+                <li><a href="inventory.html">Inventory Management</a></li>
+                <li><a href="analytics.html">Analytics</a></li>
+                <li><a href="support.html">Support & Training</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>FAQ</h3>
+            <ul>
+                <li><a href="analytics.html">How do your analytics tools integrate with existing systems?</a></li>
+                <li><a href="analytics.html">What kind of metrics can we track?</a></li>
+                <li><a href="analytics.html">How can predictive analytics benefit our business?</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-social">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/pjtechpos" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <p class="footer-text">&copy; 2024 PJTech. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Modal for Selecting Sending Method -->
+<div class="modal" id="selectMethodModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="selectMethodModalLabel">Select Sending Method</h5>
+                <button type="button" class="btn-close" onclick="closeModal()"></button>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-primary" onclick="sendMessage('whatsapp')">Send via WhatsApp</button>
+                <button class="btn btn-secondary" onclick="sendMessage('email')">Send via Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.toggle('nav-open');
+    });
+
+    function openModal() {
+        document.getElementById('selectMethodModal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('selectMethodModal').style.display = 'none';
+    }
+
+    function sendMessage(method) {
+        const form = document.getElementById('contactForm');
+        const formData = new FormData(form);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+
+        if (method === 'whatsapp') {
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=2347083023292&text=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`)}`;
+            window.open(whatsappUrl, '_blank');
+        } else if (method === 'email') {
+            const mailtoUrl = `mailto:olioxxayo@gmail.com?subject=Contact%20Form%20Submission&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`)}`;
+            window.location.href = mailtoUrl;
+        }
+        closeModal();
+    }
+</script>
+</body>
+</html>

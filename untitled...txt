@@ -1,0 +1,91 @@
+
+    <form id="contactForm" method="post" enctype="text/plain" onsubmit="event.preventDefault(); openModal();">
+        <div class="row g-3">
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control border-0 bg-secondary" id="name" placeholder="Your Name" required>
+                    <label for="name">Your Name</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control border-0 bg-secondary" id="email" placeholder="Your Email" required>
+                    <label for="email">Your Email</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control border-0 bg-secondary" id="subject" placeholder="Subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control border-0 bg-secondary" placeholder="Leave a message here" id="message" style="height: 200px" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="selectMethodModal" tabindex="-1" aria-labelledby="selectMethodModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="selectMethodModalLabel">Select Sending Method</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-primary w-100 mb-2" onclick="sendMessage('whatsapp')">Send via WhatsApp</button>
+                    <button class="btn btn-secondary w-100" onclick="sendMessage('email')">Send via Email</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            var myModal = new bootstrap.Modal(document.getElementById('selectMethodModal'), {
+                keyboard: false
+            });
+            myModal.show();
+        }
+
+        function sendMessage(method) {
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            if (method === 'whatsapp') {
+                // Construct the WhatsApp message URL
+                var whatsappURL = 'https://wa.me/+2347083023292?text=';
+                var messageBody = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nSubject: ' + subject + '\nMessage: ' + message);
+                whatsappURL += messageBody;
+
+                // Open WhatsApp in a new tab/window
+                window.open(whatsappURL, '_blank');
+            } else if (method === 'email') {
+                // Construct the mailto URL
+                var mailtoURL = 'mailtoolioxxayo@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+
+                // Open the mail client
+                window.location.href = mailtoURL;
+            }
+
+            // Hide the modal
+            var myModalEl = document.getElementById('selectMethodModal');
+            var modal = bootstrap.Modal.getInstance(myModalEl);
+            modal.hide();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
