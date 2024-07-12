@@ -427,7 +427,7 @@ footer {
 }
 
 .team-member:hover h3,
-.team-member:hover p 
+.team-member:hover p {
     color: #FFFFFF;
     z-index: 1;
     position: relative;
