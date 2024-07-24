@@ -1,126 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="PJTech, POS System, Point-of-Sale Solutions, Sales Management, Inventory Management, Business Technology" name="keywords">
-    <meta content="PJTech - Your Trusted Partner in Point-of-Sale Solutions" name="description">
-    <meta content="Innovative POS Systems" name="description">
-    <meta content="Seamless Sales and Inventory Management" name="description">
-    <meta content="PJTech is a leading provider of point-of-sale solutions, dedicated to making sales and inventory management seamless, efficient, and stress-free. With a focus on simplifying transactions, enhancing customer engagement, and providing valuable insights for data-driven decisions, PJTech is your partner in business success." name="description">
-    <title>Contact Us - PJTech</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-  <header>
-    <div class="logo">PJTech</div>
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <button class="nav-toggle">
-            <span class="hamburger"></span>
-        </button>
-    </nav>
-</header>
 
-<div class="contact">
-    <div class="contact-header">
-        <h2>Contact Us</h2>
-        <p>Get in touch with us for more information about our services.</p>
-    </div>
-    <div class="contact-container">
-        <div class="contact-info">
-            <h3>Contact Information</h3>
-            <ul>
-                <ul>
-    <li>
-        <a href="tel:+2347083023292">
-            <i class="fas fa-phone"></i> +234 708 302 3292
-        </a>
-    </li>
-    <li>
-        <a href="mailto:olioxxayo@gmail.com">
-            <i class="fas fa-envelope"></i> olioxxayo@gmail.com
-        </a>
-    </li>
-</ul>
+    <head>
+        <meta charset="utf-8">
+        <title>PJTech - Revolutionizing Sales and Inventory Management</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
 
-            </ul>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/pjtechpos" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
+        <!-- Spinner End -->
 
-        <div class="contact-form">
-            <h3>Send Us a Message</h3>
-            <form id="contactForm">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" required></textarea>
-                <button type="button" onclick="openModal()">Send Message</button>
-            </form>
-        </div>
-    </div>
-</div>
 
-<!-- Image Section -->
-<div class="image-section">
-    <img src="images/Customer software development .png" alt="Descriptive Alt Text">
-</div>
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent px-4 px-lg-5 py-3 py-lg-0">
+                <a href="index.html" class="navbar-brand p-0">
+                    <h1 class="display-6 text-primary m-0">PJTech</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
 
-<footer>
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>About PJTech</h3>
-            <p>PJTech is dedicated to revolutionizing sales and inventory management with our advanced POS system.</p>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link active">Contact Us</a>
+                    </div>
+
+                </div>
+            </nav>
         </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+        <!-- Navbar & Hero End -->
+
+
+         <!-- Header Start -->
+         <div class="container-fluid bg-breadcrumb">
+            <ul class="breadcrumb-animation">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Services</h3>
-            <ul>
-                <li><a href="possystem.html">POS System</a></li>
-                <li><a href="inventory.html">Inventory Management</a></li>
-                <li><a href="analytics.html">Analytics</a></li>
-                <li><a href="support.html">Support & Training</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>FAQ</h3>
-            <ul>
-                <li><a href="analytics.html">How do your analytics tools integrate with existing systems?</a></li>
-                <li><a href="analytics.html">What kind of metrics can we track?</a></li>
-                <li><a href="analytics.html">How can predictive analytics benefit our business?</a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <div class="footer-social">
-                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://x.com/pjtechpos" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h1>
+                <ol class="breadcrumb justify-content-center mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item active text-primary">Contact</li>
+                </ol>    
             </div>
         </div>
-        <p class="footer-text">&copy; 2024 PJTech. All rights reserved.</p>
-    </div>
-</footer>
+        <!-- Header End -->
 
-<!-- Modal for Selecting Sending Method -->
-<div class="modal" id="selectMethodModal">
+
+        <!-- Contact Start -->
+        <div class="container-fluid contact py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 900px;">
+                    <h4 class="text-primary mb-4">Contact Us</h4>
+                    <h1 class="display-5 mb-4">Get In Touch With Us</h1>
+                    <p class="mb-0">Dolor sit amet consectetur, adipisicing elit. Ipsam, beatae maxime. Vel animi eveniet doloremque reiciendis soluta iste provident non rerum illum perferendis earum est architecto dolores vitae quia vero quod incidunt culpa corporis, porro doloribus. Voluptates nemo doloremque cum.
+                    </p>
+                </div>
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
+                        <h2 class="display-5 mb-2">Our Contact Form</h2>
+                        
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" name="name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" name="email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
+                                        <label for="phone">Your Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-xl-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="project" placeholder="Project">
+                                        <label for="project">Your Project</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px" name="message"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" onclick="openModal()" type="button">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3s">
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-light d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-home fa-2x text-primary"></i></div>
+                            <div class="ms-4">
+                                <h4>Addresses</h4>
+                                <p class="mb-0">44 Isawo Road, Lagos</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-light d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-phone-alt fa-2x text-primary"></i></div>
+                            <div class="ms-4">
+                                <h4>Mobile</h4>
+ 
+                                <a href="tel:+2347083023292">
+                                    <i class="mb-0"></i> +234 708 302 3292
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="bg-light d-flex align-items-center justify-content-center mb-3" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fa fa-envelope-open fa-2x text-primary"></i></div>
+                            <div class="ms-4">
+                                <h4>Email</h4>
+
+                                <a href="mailto:olioxxayo@gmail.com">
+                                    <i class="mb-0"></i> olioxxayo@gmail.com
+                                </a>
+                                
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <div class="me-4">
+                                <div class="bg-light d-flex align-items-center justify-content-center" style="width: 90px; height: 90px; border-radius: 50px;"><i class="fas fa-share fa-2x text-primary"></i></div>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-lg-square btn-primary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-instagram"></i></a>
+                                <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded h-100">
+                            <iframe class="rounded w-100" 
+                            style="height: 500px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1694259649153!5m2!1sen!2sbd" 
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact End -->
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#"><i class="fas fa-copyright text-light me-2"></i>PJTech</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <div class="modal" id="selectMethodModal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,8 +250,7 @@
         </div>
     </div>
 </div>
-
-<script>
+    <script>
     document.querySelector('.nav-toggle').addEventListener('click', function() {
         document.querySelector('.nav-links').classList.toggle('nav-open');
     });
@@ -165,5 +280,6 @@
         closeModal();
     }
 </script>
-</body>
+    </body>
+
 </html>
